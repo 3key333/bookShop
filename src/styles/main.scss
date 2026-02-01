@@ -1,0 +1,161 @@
+// Импортируем все части
+@import './variables.scss';
+@import './mixins.scss';
+@import './layout.scss';
+@import './components.scss';
+
+//ГЛОБАЛЬЫНЕ СТИЛИ
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    width: 100%;
+}
+
+.container{
+    margin: 0 auto;
+    padding: 0px 160px;
+
+    max-width: 1440px;
+    width: 100%;
+}
+
+a{
+    text-decoration: none;
+}
+
+
+// HEADER
+
+header{
+
+    .container{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        padding-top: 45px;
+        padding-bottom: 45px;
+
+        .header-logo > p{
+            font-size: 24px;
+            font-weight: 600;
+        }
+
+        .header-navbar > nav > a{
+            margin-right: 40px;
+
+            color: $color-text;
+
+            font-size: 14px;
+            font-weight: 900;
+            text-transform: uppercase;
+
+            transition: all 0.2s ease;
+
+            &:hover{
+                color: rgba(28, 42, 57, 1);
+            }
+        }
+        .header-navbar > nav > a:last-of-type{
+            margin-right: 0px;
+        }
+
+        .header-images > a{
+            margin-right: 40px;
+            display: inline-flex;
+
+            transition: all 0.2s ease;
+
+            &:hover{
+                transform: scale(1.04);
+            }
+        }
+        .header-images > a:last-of-type{
+            margin-right: 0px;
+        }
+    }
+}
+
+// SLIDER
+
+.slider{
+    .container > .img-slider{
+        width: 1120px;
+        height: 702px;
+
+        background-image: url(/public/assets/images/first-banner.svg);
+        background-position: center;
+    }
+
+    .circles{
+        display: flex;
+        justify-content: center;
+
+        margin-top: 17px;
+
+        &>img{
+            margin-right: 10px;
+        }
+    }
+
+    margin-bottom: 105px;
+}
+
+.purple-cart{
+    position: absolute;
+    display: inline-block;
+    right: 8%;
+    margin-top: 80px;
+
+    background-color: rgba(158, 152, 220, 1);
+
+    padding: 100px 20px 20px 20px;
+
+    p{
+        font-size: 18px;
+        font-weight: 700;
+        text-transform: uppercase;
+
+        color: rgba(28, 42, 57, 1);
+    }
+
+    transition: all 0.5s ease;
+
+    &:hover{
+        transform: scale(1.02);
+    }
+    
+}
+
+.pink-cart{
+    position: absolute;
+    right: 0%;
+    margin-top: 360px;
+    padding: 150px 47px 20px 20px;
+
+    display: inline-block;
+
+    background-color: rgba(255, 143, 230, 1);
+    
+
+    p{
+        font-size: 18px;
+        font-weight: 700;
+        text-transform: uppercase;
+
+        color: rgba(28, 42, 57, 1);
+    }
+
+    transition: all 0.5s ease;
+
+    &:hover{
+        transform: scale(1.02);
+    }
+}
