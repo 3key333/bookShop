@@ -125,12 +125,6 @@ header{
 
         color: rgba(28, 42, 57, 1);
     }
-
-    transition: all 0.5s ease;
-
-    &:hover{
-        transform: scale(1.02);
-    }
     
 }
 
@@ -153,9 +147,47 @@ header{
         color: rgba(28, 42, 57, 1);
     }
 
-    transition: all 0.5s ease;
+}
 
-    &:hover{
-        transform: scale(1.02);
+// SITE_NAVBAR
+
+.site-navbar-inner{
+    display: inline-block;
+
+    padding: 45px 140px;
+    background-color: rgba(239, 238, 246, 1);
+
+    .line{
+        margin-bottom: 23px;
+        a{
+            display: flex;
+            align-items: center;
+
+            img{
+                opacity: 0;
+                transition: all 0.2s ease;
+            }
+
+            &:hover img{
+                opacity: 1;
+            }
+        }
+
+        p{
+            font-size: 16px;
+            font-weight: 500;
+
+            margin-left: 14px;
+
+            color: rgba(92, 106, 121, 1);
+
+            transition: all 0.2s ease;
+
+
+            &:hover{
+                color: rgba(28, 42, 57, 1);
+                transform: scale(1.02);
+            }
+        }
     }
 }
