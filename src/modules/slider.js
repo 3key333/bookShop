@@ -1,3 +1,4 @@
+
 const firstCircle = document.querySelector('.first-circle')
 const secondCircle = document.querySelector('.second-circle')
 const thirdCircle = document.querySelector('.third-circle')
@@ -11,12 +12,32 @@ const images = [
     '/assets/images/third-banner.svg'
 ]
 
+
 let currentValue = 0
 //imgSlider.style.backgroundImage=url(/public/assets/images/first-banner.svg);
 
 function changeImg(){
     imgSlider.style.backgroundImage = `url('${images[currentValue]}')`
     currentValue = (currentValue+1)%images.length
+
+    changeCircle()
+}
+function changeCircle(){
+
+    if(currentValue === 0){
+        firstCircle.src = '/assets/images/circle-active.svg'
+        secondCircle.src = '/assets/images/circle-dis.svg'
+        thirdCircle.src = '/assets/images/circle-dis.svg'
+    }else if(currentValue === 1){
+        firstCircle.src = '/assets/images/circle-dis.svg'
+        secondCircle.src = '/assets/images/circle-active.svg'
+        thirdCircle.src = '/assets/images/circle-dis.svg'
+    }else if(currentValue === 2){
+        firstCircle.src = '/assets/images/circle-dis.svg'
+        secondCircle.src = '/assets/images/circle-dis.svg'
+        thirdCircle.src = '/assets/images/circle-active.svg'
+    }
+
 }
 
 document.addEventListener('DOMContentLoaded', ()=>{
@@ -24,3 +45,4 @@ document.addEventListener('DOMContentLoaded', ()=>{
 })
 
 setInterval(changeImg, 4000)
+
