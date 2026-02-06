@@ -17,10 +17,17 @@ let currentValue = 0
 //imgSlider.style.backgroundImage=url(/public/assets/images/first-banner.svg);
 
 function changeImg(){
-    imgSlider.style.backgroundImage = `url('${images[currentValue]}')`
-    currentValue = (currentValue+1)%images.length
+    imgSlider.style.opacity = 0
 
-    changeCircle()
+    setTimeout(() => {
+        imgSlider.style.backgroundImage = `url('${images[currentValue]}')`
+        currentValue = (currentValue+1)%images.length
+
+        changeCircle()
+
+        imgSlider.style.opacity = 1
+        imgSlider.style.transition = 'all 0.5s ease'
+    }, 300);
 }
 function changeCircle(){
 

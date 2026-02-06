@@ -1,5 +1,7 @@
 import './styles/main.scss'
 import './modules/slider'
-import {URL} from './modules/api.js'
+import './modules/bookCard'
+
 
 console.log('SCSS подключен!');
+

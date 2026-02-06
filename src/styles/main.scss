@@ -151,6 +151,14 @@ header{
 
 // SITE_NAVBAR
 
+main{
+    display: inline-flex;
+}
+
+.site-navbar{
+    display: inline-block;
+}
+
 .site-navbar-inner{
     display: inline-block;
 
@@ -190,4 +198,33 @@ header{
             }
         }
     }
+}
+
+
+// BOOKS
+
+.load-more-btn{
+    display: flex;
+    justify-content: center;
+
+    & > a {
+        padding: 17px 60px;
+        color: $border-color-btn;
+        border: 1px $border-color-btn solid;
+
+        transition: all 0.5s ease;
+
+        &:hover{
+            transform: scale(1.02);
+        }
+    }
+}
+
+.books-loader{
+    text-align: center;
+    display: none;
+}
+
+.books-inner{
+    display: flex;
 }
